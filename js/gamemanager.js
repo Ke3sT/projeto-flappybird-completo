@@ -89,7 +89,15 @@ function criarObstaculo() {
 
     novoObstaculo.appendChild(areaSeguraObstaculo);
     estagio.getEstagio().insertAdjacentElement("beforeend", novoObstaculo);
+
+    let min = areaSeguraObstaculo.offsetTop;
+    let max = novoObstaculo.offsetHeight - areaSeguraObstaculo.offsetHeight;
+
+    let posicaoSafe = (getNumeroRandom(min, max).toFixed(0));
+
+    console.log("Pos heigh: " + posicaoSafe);
     novoObstaculo.style.left = (estagio.getMaxWidthArena() + novoObstaculo.offsetWidth) + "px";
+    areaSeguraObstaculo.style.marginTop = posicaoSafe + "px";
 
     moverObstaculo(novoObstaculo);
 
@@ -174,6 +182,10 @@ function subirPassaro(pixeis) {
             tempoLimite += 5;
         }
     }, 10);
+}
+
+function getNumeroRandom(min, max) {
+    return Math.random() * (max - min) + min;
 }
 
 //Evento para quando o usuario apertar o arrow up
