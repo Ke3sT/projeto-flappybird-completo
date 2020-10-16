@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flappy Bird</title>
+    <!-- <link rel="stylesheet" href="css/estilo.css"> -->
+    <link rel="stylesheet" href="css/flappy.css">
+</head>
+
+<body class="conteudo">
+    <h1>Flappy Bird</h1>
+    <h1 class="pontos" pontuacao>Pontuacao: 0</h1>
+
+    <h1 class="perdeu">perdeu</h1>
+    <div class="estagio" estagio>
+        <div class="bird" bird>
+            <img id="imgBird" src="imgs/passaro.png">
+        </div>
+
+        <!-- <div class="obstaculo">
+            <div class="areasegura"></div>
+        </div> -->
+
+    </div>
+
+    <div class="controles">
+        <button class="iniciar" onclick="iniciar()">Iniciar jogo</button>
+        <button class="pausar" onclick="pausar()">Pausar</button>
+    </div>
+
+    <script src="js/gameManager.js"></script>
+    <script src="js/estagio.js"></script>
+    <script src="js/obstaculo.js"></script>
+    <script src="js/areasegura.js"></script>
+    <script src="js/bird.js"></script>
+    <script src="js/flappy.js"></script>
+</body>
+
+</html>

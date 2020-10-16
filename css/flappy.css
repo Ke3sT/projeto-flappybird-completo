@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    background-color: #0D262D;
+    color: #fff;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.conteudo {
+    margin: 0px auto 0px;
+    position: relative;
+}
+
+.estagio {
+    position: relative;
+    border: 5px solid brown;
+    height: 500px;
+    overflow: hidden;
+}
+
+.bird {
+    position: absolute;
+    /* border: 1px solid cadetblue; */
+    left: 45%;
+    top: 35%;
+    z-index: 2;
+}
+
+.obstaculo {
+    background-color: green;
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    left: 100%;
+}
+
+.areasegura {
+    background-color: blue;
+    width: 100%;
+    height: 200px;
+    z-index: 1;
+    margin-top: 90px;
+}
+
+.controles {
+    /* border: 1px solid wheat; */
+    margin: 3px 0px 0px 50px;
+}
+
+.controles button {
+    padding: 8px;
+    font-size: 20px;
+    color: white;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.controles .iniciar {
+    background-color: green;
+    border-color: green;
+    border: none;
+}
+
+.controles .pausar {
+    background-color: rgb(153, 142, 42);
+    border-color: rgb(211, 128, 20);
+    border: none;
+}
+
+.pontos {
+    font-size: 29px;
+    text-decoration: underline;
+}
+
+.perdeu {
+    position: absolute;
+    font-size: 60px;
+    color: rgb(223, 78, 78);
+    border: 2px solid rgba(211, 31, 31, 0.74);
+    top: 45%;
+    left: 31%;
+    display: none;
+    z-index: 3;
+}
