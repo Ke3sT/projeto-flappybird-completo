@@ -92,15 +92,12 @@ function criarObstaculo() {
 
     let min = areaSeguraObstaculo.offsetTop;
     let max = novoObstaculo.offsetHeight - areaSeguraObstaculo.offsetHeight;
-
     let posicaoSafe = (getNumeroRandom(min, max).toFixed(0));
 
-    console.log("Pos heigh: " + posicaoSafe);
     novoObstaculo.style.left = (estagio.getMaxWidthArena() + novoObstaculo.offsetWidth) + "px";
     areaSeguraObstaculo.style.marginTop = posicaoSafe + "px";
-
+    novoObstaculo.style.clipPath = `polygon(0% 0%, 0% 100%, ${areaSeguraObstaculo.offsetLeft}px ${areaSeguraObstaculo.offsetTop - areaSeguraObstaculo.offsetHeight}px, ${areaSeguraObstaculo.offsetLeft}px ${areaSeguraObstaculo.offsetTop}px, ${novoObstaculo.offsetLeft + novoObstaculo.offsetWidth}px ${areaSeguraObstaculo.offsetTop}px, ${novoObstaculo.offsetLeft + novoObstaculo.offsetWidth}px ${areaSeguraObstaculo.offsetTop + areaSeguraObstaculo.offsetHeight}px, ${areaSeguraObstaculo.offsetLeft}px ${areaSeguraObstaculo.offsetTop + areaSeguraObstaculo.offsetHeight}px, 0% 100%, 100% 100%, 100% 0%)`;
     moverObstaculo(novoObstaculo);
-
     if (!estaVerificandoColisao) {
         console.log("Verificacao de colisao desligada. Ativando...");
         iniciarVerificadorColisao();
